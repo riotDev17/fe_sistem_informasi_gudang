@@ -28,6 +28,25 @@ const Pemasok = lazy(() => import('../pages/admin/pemasok/Index'));
 const TambahPemasok = lazy(() => import('../pages/admin/pemasok/Form/FormAdd'));
 const EditPemasok = lazy(() => import('../pages/admin/pemasok/Form/FormEdit'));
 
+// BARANG
+const Barang = lazy(() => import('../pages/admin/barang/Index'));
+const TambahBarang = lazy(() => import('../pages/admin/barang/Form/FormAdd'));
+const EditBarang = lazy(() => import('../pages/admin/barang/Form/FormEdit'));
+
+// PENGAMBILAN BARANG
+const PengambilanBarang = lazy(() => import('../pages/admin/pengambilanBarang/Index'));
+const TambahPengambilanBarang = lazy(() => import('../pages/admin/pengambilanBarang/Form/FormAdd'));
+
+// BARANG MASUK
+const BarangMasuk = lazy(() => import('../pages/admin/barangMasuk/Index'));
+const TambahBarangMasuk = lazy(() => import('../pages/admin/barangMasuk/Form/FormAdd'));
+
+// LAPORAN PENGAMBILAN BARANG
+const LaporanPengambilanBarang = lazy(() => import('../pages/admin/laporanPengambilanBarang/Index'));
+
+// LAPORAN BARANG MASUK
+const LaporanBarangMasuk = lazy(() => import('../pages/admin/laporanBarangMasuk/Index'));
+
 // LOGIN
 const Login = lazy(() => import('../pages/admin/auth/SignIn'));
 
@@ -108,6 +127,52 @@ const routes = [
   {
     path: '/pemasok/edit-pemasok/:id_pemasok',
     element: <EditPemasok />,
+  },
+
+  // BARANG
+  {
+    path: '/barang',
+    element: <Barang />,
+  },
+  {
+    path: '/barang/tambah-barang',
+    element: <TambahBarang />,
+  },
+  {
+    path: '/barang/edit-barang/:id_barang',
+    element: <EditBarang />,
+  },
+
+  // PENGAMBILAN BARANG
+  {
+    path: '/pengambilan-barang',
+    element: <PengambilanBarang />,
+  },
+  {
+    path: '/pengambilan-barang/tambah-pengambilan-barang',
+    element: <TambahPengambilanBarang />,
+  },
+
+  // BARANG MASUK
+  {
+    path: '/barang-masuk',
+    element: <BarangMasuk />,
+  },
+  {
+    path: '/barang-masuk/tambah-barang-masuk',
+    element: <TambahBarangMasuk />,
+  },
+
+  // LAPORAN PENGAMBILAN BARANG
+  {
+    path: '/laporan-pengambilan-barang',
+    element: <LaporanPengambilanBarang />,
+  },
+
+  // LAPORAN BARANG MASUK
+  {
+    path: '/laporan-barang-masuk',
+    element: <LaporanBarangMasuk />,
   },
 
   // LOGIN
